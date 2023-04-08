@@ -79,8 +79,8 @@
 
 	$:strokewidth = strokeWidth[0]
 
-	let imgsrcResult:string =""
-	let imgsrcInput:string =""
+	let imgsrcResult:string ="https://konvajs.org/assets/yoda.jpg";
+	let imgsrcInput:string ="https://konvajs.org/assets/yoda.jpg";
 
 	// export let imgHistory:{imgurl:string, settings:any, type:string  }[];
 	// export let strokes: Array<Konva.LineConfig> // This array stores all pen and eraser strokes that have been made
@@ -391,6 +391,7 @@ let stageConf = {
 		<input type="range" min="1" max="100" bind:value={strokeWidth} class="range range-sm" />
 	</div>
 </div> -->
+{#if browser}
 <div class="w-full h-full p-0 m-0 bg-transparent border-none border-transparent">
 <Stage
 	on:pointerdown={startDraw }
@@ -443,3 +444,4 @@ let stageConf = {
     </Layer> -->
 </Stage>
 </div>
+{/if}
